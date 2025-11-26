@@ -7,10 +7,10 @@ Este laboratório **Criar uma VPC (Virtual Private Cloud) através do Console da
 
 ## 🚀 Objetivo do laboratório 🚀
 Esta página demonstra:
-- Criar uma Virtual Private Cloud (VPC);
-- **Criar sub-redesa**;
-- **Configurar um grupo de segurança**
-- Criar uma Virtual Private Cloud (VPC);
+- Criar uma Virtual Private Cloud (VPC)
+- Criar sub-redesa
+- Configurar um grupo de segurança
+- Criar uma Virtual Private Cloud (VPC)
 
 ---
 
