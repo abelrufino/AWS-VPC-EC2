@@ -1,25 +1,26 @@
 # AWS-VPC-EC2
 Criando na AWS VPC e iniciando um servidor EC2 Web 
 
-Este laboratório da Escla da Nuvem **Criar uma VPC (Virtual Private Cloud) através do Console da AWS (Amazon Web Services).**.
+Este laboratório **Criar uma VPC (Virtual Private Cloud) através do Console da AWS (Amazon Web Services).**.
 
 ---
 
-## 🚀 Sobre o Projeto 🚀
+## 🚀 Objetivo do laboratório 🚀
 Esta página demonstra:
-- Como detectar automaticamente a **Região** e a **Zona de Disponibilidade** (AZ) de uma instância EC2;
-- Uma **interface moderna** feita com **Tailwind CSS e AOS**;
-- Um **rodapé com créditos e LinkedIn** do criador.
+- Criar uma Virtual Private Cloud (VPC);
+- **Criar sub-redesa**;
+- **Configurar um grupo de segurança**
+- - Criar uma Virtual Private Cloud (VPC);
 
 ---
 
-##  Tecnologias Usadas
-- HTML5  
-- Tailwind CSS  
-- AOS (Animate On Scroll)  
-- Phosphor Icons  
-- JavaScript  
-- AWS EC2 Metadata API (IMDSv2)
+##  Etapa 1: Criar a VPC
+- 1. Na página do Console da AWS, ir na busca e digitar VPC
+- 2. Na lateral da página, clicar em Suas VPCs e em seguida Criar VPC
+- 3. Na página Criar VPC, selecionar Somente VPC e em seguida digitar o nome da VPC: Lab VPC
+- 4. Em CIDR IPv4 digitar o endereçamento IP conforme o diagrama: 10.0.0.0/16
+- 5. Clicar em Criar VPC
+- 6. Pronto, a VPC foi criada e configurada  
 
 ---
 
