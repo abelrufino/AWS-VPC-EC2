@@ -15,12 +15,12 @@ Esta página demonstra:
 ---
 
 ##  Etapa 1: Criar a VPC
-- 1. Na página do Console da AWS, ir na busca e digitar VPC
-- 2. Na lateral da página, clicar em Suas VPCs e em seguida Criar VPC
-- 3. Na página Criar VPC, selecionar Somente VPC e em seguida digitar o nome da VPC: Lab VPC
-- 4. Em CIDR IPv4 digitar o endereçamento IP conforme o diagrama: 10.0.0.0/16
-- 5. Clicar em Criar VPC
-- 6. Pronto, a VPC foi criada e configurada  
+- Na página do Console da AWS, ir na busca e digitar VPC
+- Na lateral da página, clicar em Suas VPCs e em seguida Criar VPC
+- Na página Criar VPC, selecionar Somente VPC e em seguida digitar o nome da VPC: Lab VPC
+- Em CIDR IPv4 digitar o endereçamento IP conforme o diagrama: 10.0.0.0/16
+- Clicar em Criar VPC
+- Pronto, a VPC foi criada e configurada  
 
 ---
 
