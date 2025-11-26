@@ -10,7 +10,7 @@ Esta página demonstra:
 - Criar uma Virtual Private Cloud (VPC);
 - **Criar sub-redesa**;
 - **Configurar um grupo de segurança**
-- - Criar uma Virtual Private Cloud (VPC);
+- Criar uma Virtual Private Cloud (VPC);
 
 ---
 
