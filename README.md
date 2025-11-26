@@ -6,11 +6,11 @@ Este laboratório **Criar uma VPC (Virtual Private Cloud) através do Console da
 ---
 
 ## 🚀 Objetivo do laboratório 🚀
-Esta página demonstra:
+
 - Criar uma Virtual Private Cloud (VPC)
-- Criar sub-redesa
+- Criar Criar sub-redes
 - Configurar um grupo de segurança
-- Criar uma Virtual Private Cloud (VPC)
+- Executar uma instância do Amazon Elastic Compute Cloud (Amazon EC2) dentro da nova VPC
 
 ---
 
