@@ -46,6 +46,42 @@ Este laboratório **Criar uma VPC (Virtual Private Cloud) através do Console da
 18. Em CIDR IPv4 digitar o endereçamento IP conforme o diagrama: 10.0.3.0/24
 19. Em seguida clicar em Criar sub-rede
 20. Pronto, as sub-redes foram criadas e configuradas
+---
+
+##  Etapa 3: Criar uma tabela de rotas
+
+1. Primeiro, vamos configurar a tabela de rotas existente e associar as sub-redes públicas
+2. Na lateral da página, clicar em Tabela de rotas
+3. Localizar a tabela da VPC criada (Lab VPC) e renomear para Public Route Table
+4. Selecionar a tabela Public Route Table, ir para a guia Associações de sub-rede e clicar em Editar associações de sub-rede
+5. Na página Editar associações de sub-rede, selecionar a Public Subnet 1 e Public Subnet 2
+6. Em seguida clicar em Salvar associações
+7. Agora vamos criar uma nova tabela de rotas e associar as sub-redes privadas
+8. Em Tabelas de rotas, clicar em Criar tabela de rotas
+9. Em Configurações da tabela de rotas digitar o nome: Private Route Table
+10. Em VPC, selecionar a VPC criada: Lab VPC
+11. Em seguida clicar em Criar tabelas de rotas
+12. Agora vamos associar a nova tabela de rotas criada às sub-redes privadas
+13. Em Tabela de rotas, selecionar a tabela Private Route Table
+14. Na guia Associações de sub-rede, clicar em Editar associações de sub-rede
+15. Na página Editar associações de sub-rede, selecionar a Private Subnet 1 e Private Subnet 2
+16. Em seguida clicar em Salvar associações
+17. Pronto, as tabelas de rotas foram criadas e configuradas
+---
+
+##  Etapa 4: Criar uma Internet Gateway
+
+1. Na lateral da página, clicar em Gateways da internet
+2. Em seguida, clicar em Criar Gateway da Internet
+3. Na página, digitar o nome da Gateway: Lab-gateway
+4. Clicar em Criar Gateway da Internet
+5. Agora vamos associar a gateway à nossa VPC
+6. Em Gateway da internet, selecionar Lab-gateway
+7. Em seguida, clicar em Ações e selecionar Associar à VPC
+8. Na página Associar à VPC, selecionar a opção Lab-VPC
+9. Em seguida, clicar em Associar gateway da Internet
+10. Pronto, a gateway de internet foi criada e configurada
+
 
 ---
 
