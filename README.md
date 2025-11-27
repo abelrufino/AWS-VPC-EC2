@@ -26,6 +26,26 @@ Este laboratório **Criar uma VPC (Virtual Private Cloud) através do Console da
 
 ##  Etapa 2: Criar as sub-redes
 
+1. Na lateral da página, clicar em Sub-redes
+2. Na página Criar sub-rede, clicar em ID da VPC e selecionar a VCP criada: Lab VPC
+3. Em seguida clicar em Adicionar nova sub-rede
+4. Em Sub-rede 1 de 1, digite o nome da sub-rede: Public Subnet 1
+5. Em Zona de disponibilidade selecionar Oeste dos EUA (Oregon) / us-west-2-a
+6. Em CIDR IPv4 digitar o endereçamento IP conforme o diagrama: 10.0.0.0/24
+7. Em seguida clicar em Adicionar nova sub-rede
+8. Em Sub-rede 2 de 2, digite o nome da sub-rede: Public Subnet 2
+9. Em Zona de disponibilidade selecionar Oeste dos EUA (Oregon) / us-west-2-b
+10. Em CIDR IPv4 digitar o endereçamento IP conforme o diagrama: 10.0.2.0/24
+11. Em seguida clicar em Adicionar nova sub-rede
+12. Em Sub-rede 3 de 3, digite o nome da sub-rede: Private Subnet 1
+13. Em Zona de disponibilidade selecionar Oeste dos EUA (Oregon) / us-west-2-a
+14. Em CIDR IPv4 digitar o endereçamento IP conforme o diagrama: 10.0.1.0/24
+15. Em seguida clicar em Adicionar nova sub-rede
+16. Em Sub-rede 4 de 4, digite o nome da sub-rede: Private Subnet 2
+17. Em Zona de disponibilidade selecionar Oeste dos EUA (Oregon) / us-west-2-b
+18. Em CIDR IPv4 digitar o endereçamento IP conforme o diagrama: 10.0.3.0/24
+19. Em seguida clicar em Criar sub-rede
+20. Pronto, as sub-redes foram criadas e configuradas
 
 ---
 
