@@ -16,6 +16,9 @@ Este laboratório **Criar uma VPC (Virtual Private Cloud) através do Console da
 - Executar uma instância do Amazon Elastic Compute Cloud (Amazon EC2) dentro da nova VPC
 
 ---
+<img width="838" height="384" alt="image" src="https://github.com/user-attachments/assets/42c32bed-1894-41a8-9702-0d569d616cb4" />
+
+---
 
 ##  Etapa 1: Criar a VPC
 
@@ -197,6 +200,11 @@ service httpd start
 19. Abrir uma nova guia no navegador e colar o endereço copiado
 20. Pronto, a instância EC2 foi criada e configurada
 ---
+
+Se tudo tiver dado certo, a página deverá ter a seguinte aparência:
+---
+
+<img width="1304" height="691" alt="image" src="https://github.com/user-attachments/assets/98db4983-4857-4cb9-bf20-1c203354389f" />
 
 
 ##  Autor
