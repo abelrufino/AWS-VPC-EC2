@@ -1,4 +1,3 @@
-<img width="160" height="100" alt="image" src="https://github.com/user-attachments/assets/3c3593ca-c754-4a99-a460-c2b2e83b0e43" />
 
 <img width="128" height="128" alt="aws" src="https://github.com/user-attachments/assets/93da4daf-5642-4bac-8b1c-6c9707016fee" />
 
