@@ -1,4 +1,5 @@
-<img width="1361" height="768" alt="image" src="https://github.com/user-attachments/assets/0f5182d0-0301-4006-8a86-03e11229aaf4" />
+
+<img width="128" height="128" alt="aws" src="https://github.com/user-attachments/assets/93da4daf-5642-4bac-8b1c-6c9707016fee" />
 
 # AWS-VPC-EC2
 Criando na AWS VPC e iniciando um servidor EC2 Web 
