@@ -24,6 +24,11 @@ Este laboratório **Criar uma VPC (Virtual Private Cloud) através do Console da
 
 ---
 
+##  Etapa 2: Criar as sub-redes
+
+
+---
+
 ## 🖥️ Execução Local
 1. Baixe ou clone este repositório.
 2. Abra o arquivo `index.html` em um navegador.
