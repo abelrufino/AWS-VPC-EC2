@@ -81,8 +81,90 @@ Este laboratório **Criar uma VPC (Virtual Private Cloud) através do Console da
 8. Na página Associar à VPC, selecionar a opção Lab-VPC
 9. Em seguida, clicar em Associar gateway da Internet
 10. Pronto, a gateway de internet foi criada e configurada
+---
 
+##  Etapa 5: Configurar as sub-redes públicas
 
+1. Na lateral da página, clicar em Tabela de rotas
+2. Em Tabela de rotas, selecionar Public Route Table
+3. Ir para a guia Rotas e clicar em Editar rotas
+4. Em Editar rotas, clicar em Adicionar rota
+5. Em Destino, digitar o endereço: 0.0.0.0/0
+6. Em Alvo, selecionar Gateway da Internet
+7. Em seguida, clicar em Salvar alterações
+8. Pronto, as sub-redes públicas foram configuradas
+---
+
+##  Etapa 6: Criar um Gateway NAT
+
+1. Na lateral da página, clicar em Gateways NAT
+2. Em seguida clicar em Criar gateway NAT
+3. Em nome, digitar o nome da NAT gateway: Lab-NAT
+4. Em Sub-rede selecionar uma sub-rede pública: Public Subnet 1
+5. Em ID de alocação do IP elástico, clicar em Alocar IP Elástico
+6. Em seguida clicar em Criar gateway NAT
+7. Pronto, o gateway NAT foi criado e configurado
+---
+
+##  Etapa 7: Configurar as sub-redes privadas
+
+1. Na lateral da página, clicar em Tabela de rotas
+2. Em Tabela de rotas, selecionar Private Route Table
+3. Ir para a guia Rotas e clicar em Editar rotas
+4. Em Editar rotas, clicar em Adicionar rota
+5. Em Destino, digitar o endereço: 0.0.0.0/0
+6. Em Alvo, selecionar NAT Gateway
+7. Em seguida, clicar em Salvar alterações
+8. Pronto, as sub-redes privadas foram configuradas
+---
+
+Etapa 8: Configurar a atribuição automática de IP
+
+1. Agora vamos configurar a sub-rede púbica, para que os recursos recebam um IP automático ao serem provisionados
+2. Na lateral da página, clicar em Sub-redes
+3. Em Sub-redes, selecionar Public Subnet 1
+4. Em seguida, clicar em Ações e selecionar Editar configurações de sub-rede
+5. Em atribuição automática de IP, clicar em Habilitar endereço IPv4
+6. Em seguida clicar em Salvar
+7. Repetir o processo na segunda sub-rede pública
+8. Em Sub-redes, selecionar Public Subnet 2
+9. Em seguida, clicar em Ações e selecionar Editar configurações de sub-rede
+10. Em atribuição automática de IP, clicar em Habilitar endereço IPv4
+11. Em seguida clicar em Salvar
+12. Pronto, as sub-redes públicas foram configuradas
+---
+
+Etapa 9: Criar um Security Group
+
+1. Agora vamos criar um grupo de segurança, que atua como um firewall para a instância EC2
+2. Na lateral da página, clicar em Grupos de segurança
+3. Em seguida, clicar em Criar grupo de segurança
+4. Em Nome do grupo de segurança digitar: Web Security Group
+5. Em Descrição digitar: Ativar acesso HTPP
+6. Em VPC, selecionar a VPC criada: Lab VPC
+7. Agora vamos configurar as Regras de entrada
+8. Em Tipo selecionar o protocolo HTPP
+9. Em Origem, selecionar Qualquer local-IPv4 e digitar o endereço 0.0.0.0/0
+10. Em seguida clicar em Criar grupo de segurança
+11. Pronto, o grupo de segurança foi criado e configurado
+---
+
+Etapa 10: Criar uma instância EC2
+
+1. Agora vamos criar o servidor web, aquele que será nosso atendente na cafeteria
+2. Na página do Console da AWS, ir na busca e digitar EC2
+3. Na lateral da página, clicar em Instâncias
+4. Em seguida, clicar em Executar instâncias
+5. Em Iniciar uma instância, digitar o nome do servidor web: Lab-servidor
+6. Em Imagem de máquina da Amazon selecionar: Amazon Linux 2 AMI
+7. Em Tipo de instância selecionar: t2.micro
+8. Em Par de chaves selecionar: vockey
+9. Em Configurações de rede, clicar em Editar
+10. Em VPC selecionar: Lab VPC
+11. Em Sub-rede selecionar: Public Subnet 1
+12. Em Firewall, selecionar grupo de segurança existente
+13. Em Grupos de segurança comuns selecionar: Web Security Group
+14. Em Detalhes avançados, copie e cole este código na caixa Dados do usuário:
 ---
 
 ## 🖥️ Execução Local
