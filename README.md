@@ -195,6 +195,7 @@ service httpd start
 20. Pronto, a instância EC2 foi criada e configurada
 ---
 
+
 ##  Autor
 **Abel Neto**  
 © 2025 - Amanzon AWS  
