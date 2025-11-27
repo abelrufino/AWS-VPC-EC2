@@ -118,7 +118,7 @@ Este laboratório **Criar uma VPC (Virtual Private Cloud) através do Console da
 8. Pronto, as sub-redes privadas foram configuradas
 ---
 
-Etapa 8: Configurar a atribuição automática de IP
+## Etapa 8: Configurar a atribuição automática de IP
 
 1. Agora vamos configurar a sub-rede púbica, para que os recursos recebam um IP automático ao serem provisionados
 2. Na lateral da página, clicar em Sub-redes
@@ -134,7 +134,7 @@ Etapa 8: Configurar a atribuição automática de IP
 12. Pronto, as sub-redes públicas foram configuradas
 ---
 
-Etapa 9: Criar um Security Group
+## Etapa 9: Criar um Security Group
 
 1. Agora vamos criar um grupo de segurança, que atua como um firewall para a instância EC2
 2. Na lateral da página, clicar em Grupos de segurança
@@ -149,7 +149,7 @@ Etapa 9: Criar um Security Group
 11. Pronto, o grupo de segurança foi criado e configurado
 ---
 
-Etapa 10: Criar uma instância EC2
+## Etapa 10: Criar uma instância EC2
 
 1. Agora vamos criar o servidor web, aquele que será nosso atendente na cafeteria
 2. Na página do Console da AWS, ir na busca e digitar EC2
@@ -167,16 +167,9 @@ Etapa 10: Criar uma instância EC2
 14. Em Detalhes avançados, copie e cole este código na caixa Dados do usuário:
 ---
 
-## 🖥️ Execução Local
-1. Baixe ou clone este repositório.
-2. Abra o arquivo `index.html` em um navegador.
-3. (Opcional) Se estiver em uma instância **EC2**, a página exibirá automaticamente a **Região e AZ**.
-
 ---
-User Data - Deploy Automático da Página 
 
- Esse script para faz o deploy automático do seu site quando a instância EC2 com imagens de aplicação e de sistemas operacional AMI AMAZON LINUX é iniciada.
-Ele instala o Apache, clona o repositório e exibe a página diretamente no navegador via IP público da instância.
+Esse script da instância EC2.
 
 ```
 #!/bin/bash
@@ -193,56 +186,14 @@ service httpd start
 
 ```
 
-
-User Data - Deploy Automático da Página 
-
- Esse script para faz o deploy automático do seu site quando a instância EC2 com imagens de aplicação e de sistemas operacional AMI LINUX UBUNTU é iniciada.
-Ele instala o Apache, clona o repositório e exibe a página diretamente no navegador via IP público da instância.
-
-```
-#!/bin/bash
-
-# === Update packages ===
-sudo apt update -y
-sudo apt upgrade -y
-
-# === Install Git and Apache2 ===
-sudo apt install -y git apache2
-
-# === Start and enable Apache ===
-sudo systemctl start apache2
-sudo systemctl enable apache2
-
-# === Clone the repository ===
-cd /var/www/html
-sudo git clone https://github.com/abelrufino/AWS-EC2--PaginaTest.git
-
-# Copy content to web root
-sudo cp -r AWS-EC2--PaginaTest/* /var/www/html/
-
-# === Get IMDSv2 token ===
-TOKEN=$(curl -X PUT "http://169.254.169.254/latest/api/token" \
--H "X-aws-ec2-metadata-token-ttl-seconds: 21600" -s)
-
-# === Fetch metadata ===
-AZ=$(curl -H "X-aws-ec2-metadata-token: $TOKEN" \
--s http://169.254.169.254/latest/meta-data/placement/availability-zone)
-
-REGION=${AZ::-1}
-
-# === Update HTML with Region and AZ ===
-sudo sed -i "s/<span id=\"region\" class=\"font-semibold text-cyan-300\">Detecting...<\/span>/<span id=\"region\" class=\"font-semibold text-cyan-300\">${REGION}<\/span>/g" /var/www/html/index.html
-
-sudo sed -i "s/<span id=\"az\" class=\"font-semibold text-cyan-300\">Detecting...<\/span>/<span id=\"az\" class=\"font-semibold text-cyan-300\">${AZ}<\/span>/g" /var/www/html/index.html
-
-# === Fix permissions for Ubuntu (Apache user = www-data) ===
-sudo chown -R www-data:www-data /var/www/html
-sudo chmod -R 755 /var/www/html
-
-# Restart Apache
-sudo systemctl restart apache2
-
-```
+---
+15. Clicar em Executar instância
+16. Em seguida, clicar em Visualizar todas as instâncias
+17. Em Instâncias, selecionar: Lab-servidor
+18. Na guia Detalhes, copiar o Endereço IPv4 público
+19. Abrir uma nova guia no navegador e colar o endereço copiado
+20. Pronto, a instância EC2 foi criada e configurada
+---
 
 ##  Autor
 **Abel Neto**  
