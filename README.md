@@ -20,7 +20,8 @@ Este laboratório **Criar uma VPC (Virtual Private Cloud) através do Console da
 
 ---
 
-##  Etapa 1: Criar a VPC
+##  Etapa 1: Criar a VPC  <img width="200" height="200" alt="vpc" src="https://github.com/user-attachments/assets/d944184c-6355-452e-aae2-8548f472483a" />
+
 
 1. Na página do Console da AWS, ir na busca e digitar VPC
 2. Na lateral da página, clicar em Suas VPCs e em seguida Criar VPC
@@ -155,7 +156,8 @@ Este laboratório **Criar uma VPC (Virtual Private Cloud) através do Console da
 11. Pronto, o grupo de segurança foi criado e configurado
 ---
 
-## Etapa 10: Criar uma instância EC2
+## Etapa 10: Criar uma instância EC2  <img width="200" height="200" alt="ec2" src="https://github.com/user-attachments/assets/c8661410-f2b4-4c6a-8d51-6442a4e59963" />
+
 
 1. Agora vamos criar o servidor web, aquele que será nosso atendente na cafeteria
 2. Na página do Console da AWS, ir na busca e digitar EC2
